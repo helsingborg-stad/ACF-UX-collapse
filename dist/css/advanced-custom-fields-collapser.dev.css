@@ -1,0 +1,16 @@
+.acf-collapser-collapsed .acf-collapser-collapser-area {
+  max-height: 100px;
+  overflow: hidden; }
+  .acf-collapser-collapsed .acf-collapser-collapser-area::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white); }
+
+.acf-collapser-collapser-area {
+  position: relative;
+  padding: 20px; }

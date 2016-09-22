@@ -16,7 +16,7 @@ class App
      */
     public function enqueueStyles()
     {
-
+        wp_enqueue_style('acf-collapser', ACFCOLLAPSER_URL . '/dist/css/advanced-custom-fields-collapser.dev.css', null, '1.0.0');
     }
 
     /**
@@ -25,6 +25,6 @@ class App
      */
     public function enqueueScripts()
     {
-        wp_enqueue_script('acf-collapse', ACFCOLLAPSER_URL . 'dist/js/advanced-custom-fields-collapse.min.js', null, '1.0.0');
+        wp_enqueue_script('acf-collapser', ACFCOLLAPSER_URL . '/dist/js/advanced-custom-fields-collapser.dev.js', null, '1.0.0', true);
     }
 }
