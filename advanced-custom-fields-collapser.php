@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       Advanced Custom Fields Collapser
  * Plugin URI:        http://github.com/helsingborg-stad
- * Description:       Improves the repeater UX by collapsing mega rows
+ * Description:       Imrpoves the ACF repeater-field UX by adding collapsing top-level functionality
  * Version:           1.0.0
  * Author:            Kristoffer Svanmark
  * Author URI:        http://github.com/helsingborg-stad
