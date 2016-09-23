@@ -1,6 +1,8 @@
 .acf-collapser-initialized.acf-collapser-collapsed .acf-collapser-collapser-area {
   max-height: 150px;
   overflow: hidden; }
+  .acf-collapser-initialized.acf-collapser-collapsed .acf-collapser-collapser-area:hover {
+    cursor: pointer; }
   .acf-collapser-initialized.acf-collapser-collapsed .acf-collapser-collapser-area::after {
     content: '';
     display: block;
@@ -8,7 +10,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 150px;
+    height: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
     z-index: 99; }
 

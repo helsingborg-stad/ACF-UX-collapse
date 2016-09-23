@@ -17,6 +17,17 @@ AcfCollapser.FieldTypes.Repeater = (function ($) {
         $(document).on('click', '.acf-field-repeater[data-type="repeater"] .acf-collapser-initialized .acf-row-handle.order', function (e) {
             this.toggle($(e.target).closest('td').parent('.acf-row'));
         }.bind(this));
+
+        $(document).on('click', '.acf-collapser-collapser-area', function (e) {
+            var $target = $(e.target).closest('.acf-collapser-collapser-area');
+            var $element = $target.parents('.acf-row');
+
+            if (!$element.hasClass('acf-collapser-collapsed')) {
+                return;
+            }
+
+            this.toggle($element);
+        }.bind(this));
     }
 
     /**
