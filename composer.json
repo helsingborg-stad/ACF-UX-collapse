@@ -1,5 +1,5 @@
 {
-    "name": "helsingborg-stad/advanced-custom-fields-collapser",
+    "name": "helsingborg-stad/acf-ux-collapse",
     "description": "Imrpoves the ACF repeater-field UX by adding collapsing top-level functionality",
     "type": "wordpress-plugin",
     "license": "MIT",

@@ -12,7 +12,7 @@ var plumber = require('gulp-plumber');
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
-    gulp.src('source/sass/advanced-custom-fields-collapser.scss')
+    gulp.src('source/sass/acf-ux-collapse.scss')
             .pipe(plumber())
             .pipe(sass())
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
@@ -22,7 +22,7 @@ gulp.task('sass-dist', function() {
 });
 
 gulp.task('sass-dev', function() {
-    gulp.src('source/sass/advanced-custom-fields-collapser.scss')
+    gulp.src('source/sass/acf-ux-collapse.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
@@ -35,9 +35,9 @@ gulp.task('scripts-dist', function() {
     gulp.src([
             'source/js/**/*.js',
         ])
-        .pipe(concat('advanced-custom-fields-collapser.dev.js'))
+        .pipe(concat('acf-ux-collapse.dev.js'))
         .pipe(gulp.dest('dist/js'))
-        .pipe(rename('advanced-custom-fields-collapser.min.js'))
+        .pipe(rename('acf-ux-collapse.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });

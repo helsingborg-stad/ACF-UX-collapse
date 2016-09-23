@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name:       Advanced Custom Fields Collapser
- * Plugin URI:        http://github.com/helsingborg-stad
+ * Plugin Name:       ACF UX Collapse
+ * Plugin URI:        http://github.com/helsingborg-stad/ACF-UX-collapse
  * Description:       Imrpoves the ACF repeater-field UX by adding collapsing top-level functionality
  * Version:           1.0.0
  * Author:            Kristoffer Svanmark
@@ -18,20 +18,20 @@ if (! defined('WPINC')) {
     die;
 }
 
-define('ACFCOLLAPSER_PATH', plugin_dir_path(__FILE__));
-define('ACFCOLLAPSER_URL', plugins_url('', __FILE__));
-define('ACFCOLLAPSER_TEMPLATE_PATH', ACFCOLLAPSER_PATH . 'templates/');
+define('ACFUXCOLLAPSE_PATH', plugin_dir_path(__FILE__));
+define('ACFUXCOLLAPSE_URL', plugins_url('', __FILE__));
+define('ACFUXCOLLAPSE_TEMPLATE_PATH', ACFUXCOLLAPSE_PATH . 'templates/');
 
 load_plugin_textdomain('advanced-custom-fields-collapser', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
-require_once ACFCOLLAPSER_PATH . 'source/php/Vendor/Psr4ClassLoader.php';
-require_once ACFCOLLAPSER_PATH . 'Public.php';
+require_once ACFUXCOLLAPSE_PATH . 'source/php/Vendor/Psr4ClassLoader.php';
+require_once ACFUXCOLLAPSE_PATH . 'Public.php';
 
 // Instantiate and register the autoloader
-$loader = new AcfCollapser\Vendor\Psr4ClassLoader();
-$loader->addPrefix('AcfCollapser', ACFCOLLAPSER_PATH);
-$loader->addPrefix('AcfCollapser', ACFCOLLAPSER_PATH . 'source/php/');
+$loader = new AcfUxCollapse\Vendor\Psr4ClassLoader();
+$loader->addPrefix('AcfUxCollapse', ACFUXCOLLAPSE_PATH);
+$loader->addPrefix('AcfUxCollapse', ACFUXCOLLAPSE_PATH . 'source/php/');
 $loader->register();
 
 // Start application
-new AcfCollapser\App();
+new AcfUxCollapse\App();

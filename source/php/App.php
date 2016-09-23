@@ -1,6 +1,6 @@
 <?php
 
-namespace AcfCollapser;
+namespace AcfUxCollapse;
 
 class App
 {
@@ -16,7 +16,7 @@ class App
      */
     public function enqueueStyles()
     {
-        wp_enqueue_style('acf-collapser', ACFCOLLAPSER_URL . '/dist/css/advanced-custom-fields-collapser.min.css', null, '1.0.0');
+        wp_enqueue_style('acf-collapser', ACFUXCOLLAPSE_URL . '/dist/css/acf-ux-collapse.min.css', null, '1.0.0');
     }
 
     /**
@@ -25,6 +25,6 @@ class App
      */
     public function enqueueScripts()
     {
-        wp_enqueue_script('acf-collapser', ACFCOLLAPSER_URL . '/dist/js/advanced-custom-fields-collapser.min.js', null, '1.0.0', true);
+        wp_enqueue_script('acf-collapser', ACFUXCOLLAPSE_URL . '/dist/js/acf-ux-collapse.min.js', null, '1.0.0', true);
     }
 }

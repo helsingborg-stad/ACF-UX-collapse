@@ -1,6 +1,6 @@
 <?php
 
-namespace AcfCollapser\Vendor;
+namespace AcfUxCollapse\Vendor;
 
 /**
  * A PSR-4 compatible class loader.
