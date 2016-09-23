@@ -1,3 +1,3 @@
 # Advanced Custom Fields Collapser
 
-Collapses mega-fieldgroups to make drag and drop sorting more accesible.
+Imrpoves the ACF repeater-field UX by adding collapsing top-level functionality.
