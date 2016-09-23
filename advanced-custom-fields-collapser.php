@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       Advanced Custom Fields Collapser
  * Plugin URI:        http://github.com/helsingborg-stad
- * Description:       Collapses mega-fieldgroups to make drag and drop sorting more accesible.
+ * Description:       Improves the repeater UX by collapsing mega rows
  * Version:           1.0.0
  * Author:            Kristoffer Svanmark
  * Author URI:        http://github.com/helsingborg-stad
