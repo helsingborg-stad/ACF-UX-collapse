@@ -46,7 +46,7 @@ AcfUxCollapse.FieldTypes.Repeater = (function ($) {
             }
 
             $(element).addClass('acf-collapser-initialized');
-            $(element).find('.acf-fields').wrapInner('<div class="acf-collapser-collapser-area"></div>');
+            $(element).find('.acf-fields').wrapInner('<div class="acf-collapser-collapser-area acf-fields"></div>');
 
             this.toggle(element);
         }.bind(this));
