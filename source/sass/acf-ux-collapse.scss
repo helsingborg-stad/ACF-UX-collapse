@@ -63,3 +63,9 @@ $minimize: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZX
     }
 
 }
+
+a.acf-icon.-collapse[data-event="collapse-row"],
+.acf-row:hover a.acf-icon.-collapse[data-event="collapse-row"],
+.acf-repeater .acf-row:hover > .acf-row-handle .acf-icon {
+    display: none !important;
+}

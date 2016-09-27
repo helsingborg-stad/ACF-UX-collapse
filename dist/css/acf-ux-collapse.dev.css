@@ -45,3 +45,8 @@
     margin-left: 25px;
     margin-top: 3px;
     margin-right: 10px; }
+
+a.acf-icon.-collapse[data-event="collapse-row"],
+.acf-row:hover a.acf-icon.-collapse[data-event="collapse-row"],
+.acf-repeater .acf-row:hover > .acf-row-handle .acf-icon {
+  display: none !important; }

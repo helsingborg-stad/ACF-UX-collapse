@@ -41,6 +41,8 @@ AcfUxCollapse.FieldTypes.Repeater = (function ($) {
         var $field = $(field);
 
         $field.find('> .acf-input > .acf-repeater > table > tbody > .acf-row').each(function (index, element) {
+            $(element).removeClass('-collapsed');
+
             if (!$(element).hasClass('acf-clone') && $(element).height() <= 150) {
                 return;
             }
