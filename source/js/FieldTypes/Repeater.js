@@ -38,20 +38,24 @@ AcfUxCollapse.FieldTypes.Repeater = (function ($) {
     Repeater.prototype.init = function (field) {
         var $field = $(field);
 
+        var $cloneRow = $field.find('> .acf-input > .acf-repeater > table > tbody > .acf-row.acf-clone');
+        $cloneRow.removeClass('acf-clone');
+
         $field.find('> .acf-input > .acf-repeater > table > tbody > .acf-row').each(function (index, element) {
             $(element).removeClass('-collapsed');
 
-            if (!$(element).hasClass('acf-clone') && $(element).height() <= 150) {
+            if ($(element).height() <= 150) {
                 return;
             }
 
             $(element).addClass('acf-collapser-initialized');
             $(element).find('.acf-fields').wrapInner('<div class="acf-collapser-collapser-area acf-fields"></div>');
+            $(element).find('.acf-row-handle.order').append('<div class="acf-collapser-icon" data-text="Expand"></div>');
 
             this.toggle(element);
         }.bind(this));
 
-        $field.find('.acf-collapser-initialized > .acf-row-handle.order').append('<div class="acf-collapser-icon" data-text="Expand"></div>');
+        $cloneRow.addClass('acf-clone');
     };
 
     /**
