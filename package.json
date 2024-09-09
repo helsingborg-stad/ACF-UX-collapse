@@ -1,33 +1,33 @@
 {
-  "name": "@helsingborg-stad/advanced-custom-fields-collapser",
-  "version": "2.0.0",
-  "description": "Collapses mega-fieldgroups to make drag and drop sorting more accesible.",
-  "main": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "cross-env NODE_ENV=development webpack --watch",
-    "build:dev": "cross-env NODE_ENV=development webpack",
-    "build": "cross-env NODE_ENV=production webpack"
-},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/helsingborg-stad/acf-ux-collapse"
-  },
-  "author": "Kristoffer Svanmark",
-  "contributors": [
-    {
-      "name": "Max Thor",
-      "email": "max.thor@helsingborg.se"
-    }
-  ],
-  "files": [
-    "dist/"
-  ],
-  "browserslist": [
-      "> 1%",
-      "not dead"
-  ],
-  "devDependencies": {
+    "name": "@helsingborg-stad/advanced-custom-fields-collapser",
+    "version": "2.0.1",
+    "description": "Collapses mega-fieldgroups to make drag and drop sorting more accesible.",
+    "main": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "cross-env NODE_ENV=development webpack --watch",
+        "build:dev": "cross-env NODE_ENV=development webpack",
+        "build": "cross-env NODE_ENV=production webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/helsingborg-stad/acf-ux-collapse"
+    },
+    "author": "Kristoffer Svanmark",
+    "contributors": [
+        {
+            "name": "Max Thor",
+            "email": "max.thor@helsingborg.se"
+        }
+    ],
+    "files": [
+        "dist/"
+    ],
+    "browserslist": [
+        "> 1%",
+        "not dead"
+    ],
+    "devDependencies": {
         "autoprefixer": "^10.4.2",
         "clean-webpack-plugin": "^4.0.0",
         "cross-env": "^7.0.3",
@@ -46,9 +46,9 @@
         "webpack-manifest-plugin": "^4.1.1",
         "webpack-notifier": "^1.15.0"
     },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/helsingborg-stad/acf-ux-collapse/issues"
-  },
-  "homepage": "https://github.com/helsingborg-stad/acf-ux-collapse"
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/helsingborg-stad/acf-ux-collapse/issues"
+    },
+    "homepage": "https://github.com/helsingborg-stad/acf-ux-collapse"
 }
