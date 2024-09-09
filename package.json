@@ -1,29 +1,54 @@
 {
-    "name": "advanced-custom-fields-collapser",
-    "version": "2.0.0",
-    "description": "Collapses mega-fieldgroups to make drag and drop sorting more accesible.",
-    "main": "",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Svanmark/Wordpress-Plugin-Boilerplate.git"
-    },
-    "author": "Kristoffer Svanmark",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Svanmark/Wordpress-Plugin-Boilerplate/issues"
-    },
-    "homepage": "https://github.com/Svanmark/Wordpress-Plugin-Boilerplate",
-    "devDependencies": {
-        "gulp": "^3.8.11",
-        "gulp-autoprefixer": "^3.1.0",
-        "gulp-concat": "^2.5.2",
-        "gulp-cssnano": "^2.1.0",
-        "gulp-plumber": "^1.0.1",
-        "gulp-rename": "^1.2.0",
-        "gulp-sass": "^2.1.0",
-        "gulp-uglify": "^1.1.0"
+  "name": "@helsingborg-stad/advanced-custom-fields-collapser",
+  "version": "2.0.0",
+  "description": "Collapses mega-fieldgroups to make drag and drop sorting more accesible.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack"
+},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helsingborg-stad/acf-ux-collapse"
+  },
+  "author": "Kristoffer Svanmark",
+  "contributors": [
+    {
+      "name": "Max Thor",
+      "email": "max.thor@helsingborg.se"
     }
+  ],
+  "files": [
+    "dist/"
+  ],
+  "browserslist": [
+      "> 1%",
+      "not dead"
+  ],
+  "devDependencies": {
+        "autoprefixer": "^10.4.2",
+        "clean-webpack-plugin": "^4.0.0",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.6.0",
+        "import-glob-loader": "^1.1.0",
+        "mini-css-extract-plugin": "^2.5.3",
+        "css-minimizer-webpack-plugin": "^3.4.1",
+        "postcss-loader": "^6.2.1",
+        "sass": "^1.49.7",
+        "sass-loader": "^12.4.0",
+        "webpack": "^5.68.0",
+        "webpack-bundle-analyzer": "^4.5.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-config-utils": "^2.3.1",
+        "webpack-remove-empty-scripts": "^0.7.3",
+        "webpack-manifest-plugin": "^4.1.1",
+        "webpack-notifier": "^1.15.0"
+    },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/helsingborg-stad/acf-ux-collapse/issues"
+  },
+  "homepage": "https://github.com/helsingborg-stad/acf-ux-collapse"
 }
