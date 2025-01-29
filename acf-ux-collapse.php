@@ -13,6 +13,8 @@
  * Domain Path:       /languages
  */
 
+use AcfUxCollapse\CacheBust;
+
  // Protect agains direct file access
 if (! defined('WPINC')) {
     die;
@@ -34,4 +36,4 @@ $loader->addPrefix('AcfUxCollapse', ACFUXCOLLAPSE_PATH . 'source/php/');
 $loader->register();
 
 // Start application
-new AcfUxCollapse\App();
+new AcfUxCollapse\App(new CacheBust());
