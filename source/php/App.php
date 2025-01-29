@@ -2,9 +2,11 @@
 
 namespace AcfUxCollapse;
 
+use ModularityOpenStreetMap\Helper\CacheBust;
+
 class App
 {
-    public function __construct()
+    public function __construct(private CacheBustInterface $cacheBust)
     {
         add_action('admin_enqueue_scripts', array($this, 'enqueueStyles'));
         add_action('admin_enqueue_scripts', array($this, 'enqueueScripts'));
@@ -16,7 +18,9 @@ class App
      */
     public function enqueueStyles()
     {
-        wp_enqueue_style('acf-collapser', ACFUXCOLLAPSE_URL . '/dist/css/acf-ux-collapse.min.css', null, '1.0.0');
+        if($file = $this->cacheBust->getFilePathWithCacheBust('css/acf-ux-collapse.css')) {
+            wp_enqueue_style('acf-collapser', $file, null, '1.0.0');
+        }
     }
 
     /**
@@ -25,6 +29,9 @@ class App
      */
     public function enqueueScripts()
     {
-        wp_enqueue_script('acf-collapser', ACFUXCOLLAPSE_URL . '/dist/js/acf-ux-collapse.min.js', null, '1.0.0', true);
+        
+        if($file = $this->cacheBust->getFilePathWithCacheBust('js/acf-ux-collapse.js')) {
+            wp_enqueue_script('acf-collapser', $file, null, '1.0.0', true);
+        }
     }
 }
