@@ -6,8 +6,9 @@ use WpUtilService\Features\Enqueue\EnqueueManager;
 
 class App
 {
-    public function __construct(private EnqueueManager $wpEnqueue)
-    {
+    public function __construct(
+        private EnqueueManager $wpEnqueue,
+    ) {
         add_action('admin_enqueue_scripts', function () {
             $this->wpEnqueue->add('css/acf-ux-collapse.css');
         });

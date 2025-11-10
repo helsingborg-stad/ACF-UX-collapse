@@ -16,9 +16,9 @@
 use WpService\Implementations\NativeWpService;
 use WpUtilService\WpUtilService;
 
- // Protect agains direct file access
-if (! defined('WPINC')) {
-    die;
+// Protect agains direct file access
+if (!defined('WPINC')) {
+    die();
 }
 
 define('ACFUXCOLLAPSE_PATH', plugin_dir_path(__FILE__));
