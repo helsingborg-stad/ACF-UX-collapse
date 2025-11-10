@@ -38,4 +38,4 @@ require_once ACFUXCOLLAPSE_PATH . 'Public.php';
 $wpService = new NativeWpService();
 $wpUtilService = new WpUtilService($wpService);
 
-new AcfUxCollapse\App($wpUtilService->enqueue(__DIR__, '/dist'));
+new AcfUxCollapse\App($wpUtilService->enqueue(__DIR__));
