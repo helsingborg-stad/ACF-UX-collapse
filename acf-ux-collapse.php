@@ -13,11 +13,12 @@
  * Domain Path:       /languages
  */
 
-use AcfUxCollapse\CacheBust;
+use WpService\Implementations\NativeWpService;
+use WpUtilService\WpUtilService;
 
- // Protect agains direct file access
-if (! defined('WPINC')) {
-    die;
+// Protect agains direct file access
+if (!defined('WPINC')) {
+    die();
 }
 
 define('ACFUXCOLLAPSE_PATH', plugin_dir_path(__FILE__));
@@ -26,14 +27,15 @@ define('ACFUXCOLLAPSE_TEMPLATE_PATH', ACFUXCOLLAPSE_PATH . 'templates/');
 
 load_plugin_textdomain('advanced-custom-fields-collapser', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
-require_once ACFUXCOLLAPSE_PATH . 'source/php/Vendor/Psr4ClassLoader.php';
+// Autoload from plugin
+if (file_exists(ACFUXCOLLAPSE_PATH . 'vendor/autoload.php')) {
+    require_once ACFUXCOLLAPSE_PATH . 'vendor/autoload.php';
+}
+
 require_once ACFUXCOLLAPSE_PATH . 'Public.php';
 
-// Instantiate and register the autoloader
-$loader = new AcfUxCollapse\Vendor\Psr4ClassLoader();
-$loader->addPrefix('AcfUxCollapse', ACFUXCOLLAPSE_PATH);
-$loader->addPrefix('AcfUxCollapse', ACFUXCOLLAPSE_PATH . 'source/php/');
-$loader->register();
-
 // Start application
-new AcfUxCollapse\App(new CacheBust());
+$wpService = new NativeWpService();
+$wpUtilService = new WpUtilService($wpService);
+
+new AcfUxCollapse\App($wpUtilService->enqueue(__DIR__));
